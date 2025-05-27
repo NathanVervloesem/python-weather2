@@ -9,13 +9,9 @@ import os
 
 load_dotenv()  # Loading the API_KEY, something wrong here
 
+
 def get_current_weather(city="Antwerpen"):
-    #request_url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={os.getenv("API_KEY")}&units=metric"
-
-    request_url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid=5a32fa2befb69323b777151e7bea7894&units=metric"
-
-    print(os.getenv("API_KEY"))
-
+    request_url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={os.getenv("API_KEY")}&units=metric"
 
     data = requests.get(request_url).json()
 
