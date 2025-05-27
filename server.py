@@ -29,7 +29,8 @@ def get_weather():
         title=data["name"],
         status=data["weather"][0]["description"].capitalize(),
         temp = f"{data['main']['temp']:.1f}",
-        feels_like = f"{data['main']['feels_like']:.1f}"
+        feels_like = f"{data['main']['feels_like']:.1f}",
+        wind = f"Wind: {data['wind']['speed']}m/s from {wind_direction} direction ({data['wind']['deg']}°)"
     )
 
 if __name__ == "__main__":
